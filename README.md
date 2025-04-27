@@ -278,8 +278,10 @@ You should notice that parallelism achieves a nearly (but not quite) 10x speedup
 
 Ensure that your runtimes on the lambda server are recorded below.
 
-<img width="611" alt="image" src="https://github.com/user-attachments/assets/5a06d70d-a104-4326-a2b3-81d57faa3102" />
+[<img width="611" alt="image" src="https://github.com/user-attachments/assets/5a06d70d-a104-4326-a2b3-81d57faa3102" />
+](https://github.com/RowanGray472/twitter_postgres_parallel/)
 
+@mizbicki I changed the pg_normalized_batch time after the deadline; no other changes were made in the latest commit. It was bugging me that the time for the pg_normalized_batch was ~50x better as opposed to ~10x. My best guess so far is that it was an issue with Docker not recognizing the updated schema for some reason, even after I pruned the unused volumes. 
 
 Then upload a link to your forked github repo on sakai.
 
