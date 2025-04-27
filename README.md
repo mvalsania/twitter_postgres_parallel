@@ -278,7 +278,7 @@ You should notice that parallelism achieves a nearly (but not quite) 10x speedup
 
 Ensure that your runtimes on the lambda server are recorded below.
 
-<img width="602" alt="image" src="https://github.com/user-attachments/assets/d241f619-00ec-461f-bf97-839786890ade" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/621fad98-53cd-4b04-8624-80b15ddff4e4" />
 
 @mizbicki I changed the pg_normalized_batch time after the deadline; no other changes were made in the latest commit. It was bugging me that the time for the pg_normalized_batch was ~50x better as opposed to ~10x. My best guess so far is that it was an issue with Docker not recognizing the updated schema for some reason, even after I pruned the unused volumes. 
 
