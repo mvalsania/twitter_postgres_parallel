@@ -277,10 +277,13 @@ You should notice that parallelism achieves a nearly (but not quite) 10x speedup
 ## Submission
 
 Ensure that your runtimes on the lambda server are recorded below.
+|                     | elapsed time (sequential)                              | elapsed time (parallel)                                |
+|---------------------|---------------------------------------------------------|--------------------------------------------------------|
+| **pg_normalized**       | real 8m6.269s<br>user 3m4.032s<br>sys 0m21.310s    | real 1m6.557s<br>user 3m49.029s<br>sys 0m23.645s     |
+| **pg_normalized_batch** | real 3m21.832s<br>user 2m24.860s<br>sys 0m9.157s  | real 0m19.271s<br>user 2m33.300s<br>sys 0m7.659s     |
+| **pg_denormalized**     | real 0m23.208s<br>user 0m5.739s<br>sys 0m2.099s   | real 0m4.243s<br>user 0m4.197s<br>sys 0m1.596s      |
 
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/621fad98-53cd-4b04-8624-80b15ddff4e4" />
-
-@mizbicki I changed the pg_normalized_batch time after the deadline; no other changes were made in the latest commit. It was bugging me that the time for the pg_normalized_batch was ~50x better as opposed to ~10x. My best guess so far is that it was an issue with Docker not recognizing the updated schema for some reason, even after I pruned the unused volumes. 
+@mizbicki I changed the pg_normalized_batch time after the deadline; no other changes were made after the deadline. It was bugging me that the time for the pg_normalized_batch was ~50x better as opposed to ~10x. My best guess so far is that it was an issue with Docker not recognizing the updated schema for some reason, even after I pruned the unused volumes. 
 
 Then upload a link to your forked github repo on sakai.
 
